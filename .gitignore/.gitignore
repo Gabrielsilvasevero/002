@@ -1,0 +1,125 @@
+EXERCICIO1
+package exercicio1;
+
+public class principal {
+public static void main(String args[]){
+	
+	
+retangulo arearetangulo = new retangulo();
+arearetangulo.base= 20;
+arearetangulo.altura= 30;
+System.out.println("area do retangulo: "+arearetangulo.calculararea());
+
+triangulo areatriangulo = new triangulo();
+areatriangulo.base= 30;
+areatriangulo.altura= 25;
+System.out.println("area do triangulo: "+areatriangulo.calculararea());
+}
+}
+
+package exercicio1;
+
+public class triangulo {
+double altura;
+double base;
+double area;
+ 
+double calculararea(){
+ area = (base * altura)/2;
+  return area;
+ }
+}
+
+package exercicio1;
+
+public class retangulo {
+
+double altura;
+double base;
+double area;
+
+double calculararea(){
+ area = base * altura;
+ return area;
+}
+}
+
+
+
+
+EXERCICIO2
+package exercicio2;
+
+public class principal {
+public static void main(String args[]){
+	calculadora conta = new calculadora();
+	conta.numero1= 5;
+	conta.numero2=2;
+    System.out.println("soma: "+conta.somar());
+    System.out.println("multiplicacao: "+conta.multiplicacao());
+    System.out.println("subtracao: "+conta.subtracao());
+    System.out.println("divisao: "+conta.divisao());
+}
+}
+
+package exercicio2;
+
+public class calculadora {
+double numero1;
+double numero2;
+double soma1;
+double divisao1;
+double subtracao1;
+double multiplicacao1;
+
+double somar(){
+	soma1 = numero1 + numero2;
+	return soma1;
+}
+double divisao(){
+	divisao1 = numero1 / numero2;
+	return divisao1;
+}
+double subtracao(){
+	subtracao1 = numero1 - numero2;
+	return subtracao1;
+}
+double multiplicacao(){
+	multiplicacao1 = numero1 * numero2;
+	return multiplicacao1;
+}
+}
+
+
+
+
+EXERCICIO3
+package exercicio3;
+
+public class principal {
+public static void main(String args[]){
+	pessoa pessoa1 = new pessoa();
+	pessoa1.nome= "Gabriel ";
+	pessoa1.sobrenome= "da Silva";
+	pessoa1.anonascimento = 2004;
+	System.out.println(pessoa1.noemecompleto());
+	System.out.println(pessoa1.calcularidade());
+}
+}
+
+package exercicio3;
+
+public class pessoa {
+String nome;
+String sobrenome;
+int anonascimento;
+int idade;
+
+int calcularidade(){
+	idade = 2020 - anonascimento;
+	return idade;
+}
+String noemecompleto(){
+	return nome + sobrenome;
+}
+}
